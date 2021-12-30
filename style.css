@@ -1,0 +1,56 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    height: 100%;
+    width: 100%;
+    color: black;
+    background-color: #48FA7E;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* gradient -> #48FA7E, #1FCD78  */
+
+#greetings {
+    font-size: 40px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+
+}
+
+#githubRepository {
+    padding: 15px;
+    font-size: 20px;
+    color: black;
+    background: #42E642;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition-duration: 1s;
+    transition-property: all;
+    transition-timing-function: ease-in;
+
+
+}
+
+/* gradient -> #42E642, #6FE642*/
+
+#githubRepository:hover {
+    background: #42E6DA;
+}
+
+/* gradient -> #42E6DA, #429EE6 */
+
+#otherContainer {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+#otherContainer * {
+    transform: translate(-50%, -50%);
+}
