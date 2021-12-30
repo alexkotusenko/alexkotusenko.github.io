@@ -9,48 +9,54 @@ body {
     height: 100%;
     width: 100%;
     color: black;
-    background-color: #48FA7E;
+    background-color: #4C83D0;
     font-family: 'Open Sans', sans-serif;
 }
 
-/* gradient -> #48FA7E, #1FCD78  */
+#mainContainer {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+#mainContainer * {
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
 #greetings {
     font-size: 40px;
     font-weight: bold;
     transform: translate(-50%, -50%);
-
+    letter-spacing: 2px;
 }
 
 #githubRepository {
     padding: 15px;
     font-size: 20px;
     color: black;
-    background: #42E642;
+    background: #4B6D9D;
     border-radius: 5px;
     border: none;
     outline: none;
     transition-duration: 1s;
     transition-property: all;
     transition-timing-function: ease-in;
-
-
 }
-
-/* gradient -> #42E642, #6FE642*/
 
 #githubRepository:hover {
-    background: #42E6DA;
+    background: #739EDA;
 }
 
-/* gradient -> #42E6DA, #429EE6 */
-
-#otherContainer {
-    position: absolute;
-    top: 30%;
-    left: 50%;
+#ps {
+    letter-spacing: 2px;
 }
 
-#otherContainer * {
-    transform: translate(-50%, -50%);
+#smiley {
+    font-size: 30px;
+}
+
+/* Delete later? */
+.rotated {
+    transform: rotate(-90deg);
 }
