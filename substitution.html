@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naloho</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;1,400&family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- main.css -->
+    <link rel="stylesheet" href="main.css"> 
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Adding more spaces between the text elements -->
+        <style>
+            .col-sm-8 {
+                padding: 15px 0 15px 0;
+            }
+        </style>
+
+         <!-- Upper (main) Navbar -->
+         <div class="row">
+            <nav class="upperNav">
+                <div class="col">
+                    <h4>Naloho
+                        <span id="hyphen"> - </span>
+                        <span>Cryptography Made Simple</span>
+                    </h4>
+                    <a href="https://alexkotusenko.github.io"><img src="other/naroho_svg.svg" class="nalohoLogo"></a>
+                </div>
+            </nav>
+        </div>
+
+         <!-- Separator -->
+         <div class="row">
+            <nav class="separator"></nav>
+        </div>
+
+        <!-- Content -->
+        <div class="firstRow lastRow">
+
+            <h4 class="col-sm-8 centered">The Substitution Cipher</h4>
+
+            <p class="col-sm-8 centered">There are many ciphers out there, ranging from simple to almost unbreakable. Given the substantial number of ciphers out there, there’s a particular one that stands out more than others due to its surprisingly secure system given its simplicity. This cipher is known as <span class="bold">the substitution cipher</span>, where the encryption is provided by, as its name suggests, substituting letters of the alphabet with other letters or symbols.</p>
+
+            <p class="col-sm-8 centered">I should also mention that the letters of the alphabet can also be substituted by symbols or anything else the parties agree upon. For example, some people may agree upon using a mix of letters and symbols as alternatives for the original alphabet’s letters and their positions, while another group if people might agree on using a set of Egyptian styled symbols or even create their own.</p>
+
+            <p class="col-sm-8 centered">Unlike other ciphers, the substitution cipher is very simple and doesn't require any calculations in order to encrypt and decrypt a message. The key used in this cipher is a set of 26 letters and/or symbols.</p>
+
+            <p class="col-sm-8 centered">To encrypt a message using this cipher, one has to simply replace all the characters within the message with their corresponding counterparts. Likewise, to decrypt a message one has to do the same operation all over again.</p>
+
+            <p class="col-sm-8 centered">Now what makes this cipher relatively strong is the fact that it couldn’t be easily cracked using brute force. As a matter of fact, there's 26! (26*25*24….*1) possible key combinations, and it would take a while to check them all.</p>
+
+            <p class="col-sm-8 centered">However, this cipher has its own downsides, just like most things in life do. Even though brute force is not an efficient method of cracking this cipher, it can be very easily cracked using other techniques that typically don’t require any software operations, such as frequency analysis.</p>
+        </div> 
+
+        <!-- Separator -->
+        <div class="row">
+            <nav class="separator"></nav>
+        </div>
+
+        <!-- Lower Navbar -->
+        <div class="row">
+            <nav class="lowerNav">
+                <a href="https://github.com/alexkotusenko/alexkotusenko.github.io" class="githubLogoContainer">
+                    <img src="other/githublogo.png" class="githubLogo">
+                </a>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

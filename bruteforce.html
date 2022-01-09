@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naloho</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;1,400&family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- main.css -->
+    <link rel="stylesheet" href="main.css"> 
+</head>
+<body>
+    <div class="container-fluid">
+         <!-- Upper (main) Navbar -->
+         <div class="row">
+            <nav class="upperNav">
+                <div class="col">
+                    <h4>Naloho
+                        <span id="hyphen"> - </span>
+                        <span>Cryptography Made Simple</span>
+                    </h4>
+                    <a href="https://alexkotusenko.github.io"><img src="other/naroho_svg.svg" class="nalohoLogo"></a>
+                </div>
+            </nav>
+        </div>
+
+         <!-- Separator -->
+         <div class="row">
+            <nav class="separator"></nav>
+        </div>
+
+        <!-- Content -->
+        <div class="firstRow lastRow">
+
+            <h4 class="col-sm-8 centered">The Brute Force Attack</h4>
+
+            <p class="col-sm-8 centered">Since the dawn of cryptography, there has been an endless race between people who created ciphers and the ones who were trying to crack them. In fact, such a race is still very much present in our times. Cipher breakers constantly find new ways to break a cryptosystem, which gives cipher creators an insight on the weaker parts of the cipher in question. In the history of cryptography, more often than not, ciphers that were deemed to be unbreakable for several decades or even centuries got cracked after a while, thus drastically changing our understanding of the properties of ciphers.</p>
+
+            <p class="col-sm-8 centered">One of the most ancient and simplest ways to crack a cryptosystem is done by trying every single combination of the key in question, which is called <span class="bold">The Brute Force Attack</span>. One might think that this way of cracking a cipher roots in cryptography, but that's not the case. This code breaking attack can also be applied to many different things in life, even the ones not entirely related to cryptography. Imagine a code lock, where the key is a four digit number. If brute force were to be applied in bypassing the lock, one would need to try every single key combination possible within the system in question. In the case with a four digit number code, one would have to try up to ten thousand different keys to successfully bypass the lock!</p>
+
+            <p class="col-sm-8 centered">As you might have guessed already, the brute force approach is not always the best way to crack a cipher. However, it allows us to cross out the ciphers that are vulnerable to it, and that’s the case of the Caesar Cipher.</p>
+
+            <p class="col-sm-8 centered">As mentioned before, the key within the Caesar Cipher is a number between 1 and 26 inclusively. Therefore, there are 26 possible key variations for this cipher. Unlike the code lock example mentioned above, where there are thousands of possible code combinations, given that this cipher only has a few possible keys, it becomes vulnerable to such an attack.</p>
+
+            <p class="col-sm-8 centered">For this demonstration, I will show how vulnerable this cipher is by using the brute force to decrypt the following message: “Lzak ak s kwujwl ewkksyw.”</p>
+
+            <div class="col-sm-8 code-container centered">
+                <code>
+                +1 Mabl bl t lxvkxm fxlltzx.<br>
+                +2 Nbcm cm u mywlyn gymmuay.<br>
+                +3 Ocdn dn v nzxmzo hznnvbz.<br>
+                +4 Pdeo eo w oaynap iaoowca.<br>
+                +5 Qefp fp x pbzobq jbppxdb.<br>
+                +6 Rfgq gq y qcapcr kcqqyec.<br>
+                +7 Sghr hr z rdbqds ldrrzfd.<br>
+                +8 <span class="bold">This is a secret message.</span>
+                </code>
+            </div>
+        
+            <p class="col-sm-8 centered">After trying 8 key combinations out of 26 possible ones, we stumble upon a readable text, which implies that the message has successfully been encrypted.</p>
+
+            <p class="col-sm-8 centered">Although this cipher was deemed to be strong when it was used for the first time by Julius Caesar, after some time, some cryptographer managed to crack it, which allowed cipher makers to analyze the weak spots in a cipher and improve the security of the other ones they created.</p>
+        </div> 
+
+        <!-- Separator -->
+        <div class="row">
+            <nav class="separator"></nav>
+        </div>
+
+        <!-- Lower Navbar -->
+        <div class="row">
+            <nav class="lowerNav">
+                <a href="https://github.com/alexkotusenko/alexkotusenko.github.io" class="githubLogoContainer">
+                    <img src="other/githublogo.png" class="githubLogo">
+                </a>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

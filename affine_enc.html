@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naloho</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;1,400&family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- main.css -->
+    <link rel="stylesheet" href="main.css"> 
+</head>
+<body>
+    <div class="container-fluid">
+         <!-- Upper (main) Navbar -->
+         <div class="row">
+            <nav class="upperNav">
+                <div class="col">
+                    <h4>Naloho
+                        <span id="hyphen"> - </span>
+                        <span>Cryptography Made Simple</span>
+                    </h4>
+                    <a href="https://alexkotusenko.github.io"><img src="other/naroho_svg.svg" class="nalohoLogo"></a>
+                </div>
+            </nav>
+        </div>
+
+         <!-- Separator -->
+         <div class="row">
+            <nav class="separator"></nav>
+        </div>
+
+        <!-- Content -->
+        <div class="firstRow lastRow">
+
+            <h4 class="col-sm-8 centered">The Affine Cipher and Introduction to Modular Arithmetic I</h4>
+
+            <p class="col-sm-8 centered">Most people start learning about functions in math somewhere around the 8th grade. Personally, I know many students who used to fall asleep on their desks while asking themselves how will f(x) = ax + b help them in life. Fortunately, there are quite a few uses of the linear function in cryptography, and one of the best examples I can think of is <span class="bold">the Affine Cipher</span>. It’s a form of a substitution cipher, where each plaintext letter has a unique corresponding ciphertext letter. Even though this cipher is not the safest one our of the ones I have covered already due to it being vulnerable to the frequency analysis, the way it functions relies on modular arithmetic, which is an important subject within cryptography.</p>
+
+            <p class="col-sm-8 centered">To begin with, let’s take a look at how this cipher works. It’s encryption method is defined by the following function:</p>
+
+            <p class="col-sm-8 centered italic dead-middle">E(x) ≡ (ax + b) mod 26</p>
+
+            <p class="col-sm-8 centered">Due to certain unique properties of modular arithmetic, this equation can only be used to <span class="bold">encrypt</span> a message (the only variable one can replace (besides a and b) is x).</p>
+
+            <p class="col-sm-8 centered">To encrypt a message using the affine cipher, one has to take the index of a plaintext letter, replace the x in the encryption function with it and find the value of E(x) (which corresponds to the index of the ciphertext version of said letter) by resolving the equation.</p>
+
+            <p class="col-sm-8 centered">In this cipher, the key values are the a and the b variables within the equation, as they’re the variables that the encryption and the decryption methods rely on.</p>
+            
+            <p class="col-sm-8 centered">Now, such a unique notation may seem intimidating at first, but it’s actually pretty easy to understand. To begin with, what does the mod 26 operation mean? This element of modular arithmetic is called the <span class="bold">modulo operator</span>. Previously, when I explained how the caesar cipher works, I stated that whenever the index obtained after performing the encryption or the decryption operation is lower than 1 or bigger than 26, one has to add or subtract 26 from it as many times as necessary for it to fall into the 1-26 range. Simply put, the modulo operator is the fancier version of this operation put into mathematics in order to tackle different ciphers.</p>
+
+            <p class="col-sm-8 centered">But what does the odd equals sign mean? The sign separating the dependant variable from the rest of the equation is the congruence sign (≡), which can be seen as the equivalent of the equals sign within modular arithmetic. <span class="bold">When working with the modulo operator, it is used instead of the traditional equals sign (=).</span></p>
+
+            <p class="col-sm-8 centered">This operation can also be represented by the way a clock works, whenever the arrow passes the 12 hour mark, it goes back to 1, and whenever said clock stops and you need to rewind it, if the arrow goes past 1, it goes back to 12. </p>
+
+            <p class="col-sm-8 centered">By this logic, <span class="bold">0 ≡ 26 mod 26</span>, <span class="bold">10 ≡ 30 mod 20</span> and <span class="bold">16 ≡ -10 mod 26</span>.</p>
+
+            <p class="col-sm-8 centered">Now, you may have noticed that <span class="bold">0 ≡ 26 mod 26</span>, even though 26 is within the 1-26 range and logically, subtracting 26 from the number wasn’t required.</p>
+
+            <p class="col-sm-8 centered">The more complex a cipher is, the more complex the encryption and decryption methods will be. In modular arithmetic, when using the following formula: <span class="bold">y ≡ x mod m</span>, if  <span class="bold">x = m</span>, y will be equal to <span class="bold">0</span>.</p>
+
+            <p class="col-sm-8 centered">Because of this, the lowest possible index we can get after performing an operation is 0, and the biggest one we can get is 25. That’s why the way we attribute the indexes to letters will be a bit different. From now on, the index of the letter A will be 0 instead of 1 and the index of Z will be 25 instead of 26.</p>
+
+            <div class="table-container">
+                <table class="affine-enc-table-1">
+                    <tr>
+                        <th>Letter</th>
+                        <td>A</td>
+                        <td>B</td>
+                        <td class="no-bottom-border">...</td>
+                        <td>R</td>
+                        <td class="no-bottom-border">...</td>
+                        <td>Z</td>
+                    </tr>
+                    <tr>
+                        <th>Index</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td class="no-top-border"></td>
+                        <td>17</td>
+                        <td class="no-top-border"></td>
+                        <td>25</td>
+                    </tr>
+                </table>
+            </div>
+
+            <p class="col-sm-8 centered">The following process shows how to encrypt the message “Hello World!” using the following equation: y ≡ 5x + 7 mod 26:</p>
+
+            <div class="table-container">
+                <table class="affine-enc-table-2">
+                    <tr>
+                        <th>Plaintext letter</th>
+                        <td>H</td>
+                        <td>E</td>
+                        <td>L</td>
+                        <td>L</td>
+                        <td>O</td>
+                        <td>W</td>
+                        <td>O</td>
+                        <td>R</td>
+                        <td>L</td>
+                        <td>D</td>
+                    </tr>
+                    <tr>
+                        <th>Original index (x)</th>
+                        <td>7</td>
+                        <td>4</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td>14</td>
+                        <td>22</td>
+                        <td>14</td>
+                        <td>17</td>
+                        <td>11</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th class="italic">y ≡ 5x + 6 mod 26</th>
+                        <td>16</td>
+                        <td>1</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>25</td>
+                        <td>13</td>
+                        <td>25</td>
+                        <td>14</td>
+                        <td>10</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <th>Ciphertext letter</th>
+                        <td>Q</td>
+                        <td>B</td>
+                        <td>K</td>
+                        <td>K</td>
+                        <td>Z</td>
+                        <td>N</td>
+                        <td>Z</td>
+                        <td>O</td>
+                        <td>K</td>
+                        <td>W</td>
+                    </tr>
+                </table>
+            </div>
+
+            <p class="col-sm-8 centered">The ciphertext is “<span class="bold">Qbkkz Nzokw!</span>”.</p>
+        </div> 
+
+
+        <!-- Separator -->
+        <div class="row">
+            <nav class="separator"></nav>
+        </div>
+
+        <!-- Lower Navbar -->
+        <div class="row">
+            <nav class="lowerNav">
+                <a href="https://github.com/alexkotusenko/alexkotusenko.github.io" class="githubLogoContainer">
+                    <img src="other/githublogo.png" class="githubLogo">
+                </a>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

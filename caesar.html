@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naloho</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;1,400&family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- main.css -->
+    <link rel="stylesheet" href="main.css"> 
+</head>
+<body>
+    <div class="container-fluid">
+         <!-- Upper (main) Navbar -->
+         <div class="row">
+            <nav class="upperNav">
+                <div class="col">
+                    <h4>Naloho
+                        <span id="hyphen"> - </span>
+                        <span>Cryptography Made Simple</span>
+                    </h4>
+                    <a href="https://alexkotusenko.github.io"><img src="other/naroho_svg.svg" class="nalohoLogo"></a>
+                </div>
+            </nav>
+        </div>
+
+         <!-- Separator -->
+         <div class="row">
+            <nav class="separator"></nav>
+        </div>
+
+        <!-- Content -->
+        <div class="firstRow lastRow">
+
+            <h4 class="col-sm-8 centered">The Caesar Cipher</h4>
+
+            <p class="col-sm-8 centered">One of the simplest and widely known ciphers is the Caesar Cipher. Just like its name suggests, it was named after Julius Caesar, who reportedly used it to encrypt military-related messages.</p>
+
+            <p class="col-sm-8 centered">Before explaining how this cryptosystem works, I should touch upon the significance of indexes of letters in an alphabet. As we all know, the English alphabet consists of 26 letters. Each one has its own index, representing its position in the alphabet. By this logic, the index of the letter A is 1 and the index of the letter X is 24.</p>
+
+            <p class="col-sm-8 centered">Indexes of letters are commonly used in cryptography to label letters using numbers, which make mathematical operations possible.</p>
+
+            <p class="col-sm-8 centered">Many ciphers use the index property of letters to encrypt messages and the Caesar Cipher is one of them.</p>
+
+            <p class="col-sm-8 centered">To encrypt a message using the Caesar Cipher one needs to:</p>
+            <ol>
+                <li class="col-sm-8 centered">Define the key value</li>
+
+                <li class="col-sm-8 centered">Get the index of each letter in the message</li>
+
+                <li class="col-sm-8 centered">Add the key value to the index of each letter to obtain the new index of every letter <span class="bold">*</span></li>
+
+                <li class="col-sm-8 centered">Convert the newly obtained indexes into letters, thus obtaining the ciphertext</li>
+            </ol>
+
+            <p class="col-sm-8 centered"><span class="bold">*</span> Note: if the new index is bigger than 26 or smaller than 0, an additional operation has to be performed.</p>
+
+            <p class="col-sm-8 centered">The key used in the Caesar Cipher is an integer between 1 and 26 inclusively.</p>
+
+            <p class="col-sm-8 centered">As an example, I will explain how to encrypt “Hello World!” using a key value of 5.</p>
+
+            <p class="col-sm-8 centered">For this demonstration, I will use a conversion table to majorly simplify the task. It is also highly recommended to use a table just like this one when performing manual encryption and decryption.</p>
+
+            <p class="col-sm-8 centered">First of all, we need to define the key value. As mentioned already, for this example it’s 5.</p>
+
+            <p class="col-sm-8 centered">Now, we need to get the index value of each letter in the message.</p>
+
+            <p class="col-sm-8 centered"><span class="bold">Note</span>:  In this case, we will not take into account the indexes of symbols such as exclamation points or question marks as well as smaces, as they will not be encrypted. Also, the capital letters will stay capital after conversion. Please also note that these details can vary from one case to another, depending on what the parties agreed on.</p>
+
+            <p class="col-sm-8 centered">The following table displays the index of each letter in the message.</p>
+            
+            <div class="table-container">
+                <table class="caesar-table">
+                    <tr>
+                        <th>H</th>
+                        <th>E</th>
+                        <th>L</th>
+                        <th>L</th>
+                        <th>O</th>
+                        <th>W</th>
+                        <th>O</th>
+                        <th>R</th>
+                        <th>L</th>
+                        <th>D</th>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>15</td>
+                        <td>23</td>
+                        <td>15</td>
+                        <td>18</td>
+                        <td>12</td>
+                        <td>4</td>
+                    </tr>
+                </table>
+            </div>
+            <p class="col-sm-8 centered">Now, we have to add 5 to every single index to obtain a list of new indexes.</p>
+
+            <div class="table-container">
+                <table class="caesar-table">
+                    <tr>
+                        <td>13</td>
+                        <td>10</td>
+                        <td>17</td>
+                        <td>17</td>
+                        <td>20</td>
+                        <td class="cell-info">28</td>
+                        <td>20</td>
+                        <td>23</td>
+                        <td>17</td>
+                        <td>9</td>
+                    </tr>
+                </table>
+            </div>
+
+            <p class="col-sm-8 centered">Now, as you can see, one of the newly obtained indexes is equal to 28. Whenever the value of a new index is more than 26, you need to divide 26 from the new index until it’s between 1 and 26 inclusively. Likewise, whenever your new index is smaller than 26, you need to add 26 to the new index until it’s between 1 and 26 inclusively. The reasoning behind that is that there is no letter with the index smaller than 1 or bigger than 26 to associate the new index to. You can think of this index system as a clock, where whenever it strikes past twelve, the arrow just loops around the clock, thus always staying inside of this limited loop.</p>
+
+            <p class="col-sm-8 centered">Keeping that in mind, we can say that the new index of the sixth letter is actually 2 (28-26). Now, the last thing we have to do is to translate the newly obtained indexes into letters, thus compiling the ciphertext.</p>
+
+            <div class="table-container">
+                <table class="caesar-table">
+                    <tr>
+                        <td>13</td>
+                        <td>10</td>
+                        <td>17</td>
+                        <td>17</td>
+                        <td>20</td>
+                        <td>2</td>
+                        <td>20</td>
+                        <td>23</td>
+                        <td>17</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <th>M</th>
+                        <th>J</th>
+                        <th>Q</th>
+                        <th>Q</th>
+                        <th>T</th>
+                        <th>B</th>
+                        <th>T</th>
+                        <th>W</th>
+                        <th>Q</th>
+                        <th>I</th>
+                    </tr>
+                </table>
+            </div>
+
+            <p class="col-sm-8 centered">As you can see, the ciphertext of “Hello World!” encrypted using a key value of 5 is “Mjqqt Btwqi!”.</p>
+
+            <p class="col-sm-8 centered">In the case of the Caesar Cipher, the decryption process is similar to the encryption one. To decrypt a message, one has to subtract the key value from the index of each letter, thus getting the original index of a letter and compiling the plaintext. It is also required to make sure that the index values obtained while decrypting a message are between 1 and 26 inclusively using the operation mentioned above, otherwise it wouldn’t be possible to associate the indexes in question with the corresponding letters of the alphabet.</p>
+        </div> 
+
+        <!-- Separator -->
+        <div class="row">
+            <nav class="separator"></nav>
+        </div>
+
+        <!-- Lower Navbar -->
+        <div class="row">
+            <nav class="lowerNav">
+                <a href="https://github.com/alexkotusenko/alexkotusenko.github.io" class="githubLogoContainer">
+                    <img src="other/githublogo.png" class="githubLogo">
+                </a>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

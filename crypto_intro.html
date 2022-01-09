@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naloho</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;1,400&family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- main.css -->
+    <link rel="stylesheet" href="main.css">    
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Upper (main) Navbar -->
+        <div class="row">
+            <nav class="upperNav">
+                <div class="col">
+                    <h4>Naloho
+                        <span id="hyphen"> - </span>
+                        <span>Cryptography Made Simple</span>
+                    </h4>
+                    <a href="https://alexkotusenko.github.io"><img src="other/naroho_svg.svg" class="nalohoLogo"></a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Separator -->
+        <div class="row">
+            <nav class="separator"></nav>
+        </div>
+
+        <!-- Content -->
+        <div class="row firstRow lastRow">
+            <h4 class="col-sm-8 centered">1.1 Basic Cryptographic Terms and Concepts</h4>
+
+            <p class="col-sm-8 centered">In the modern world, cryptography is used everywhere. Every single piece of technology relies on it, ranging from phone calls to bank accounts. Although one might think that given the complexity of cryptosystems, cryptography is a rather new discipline, that’s not at all the case.</p>
+
+            <p class="col-sm-8 centered">Methods of encryption known to humanity have been evolving since around 1900 BC and have come a long way. Despite their differences, every single encryption method relies on many different cryptographic concepts in order to function, and that’s what this article is going to be about.</p>
+
+            <p class="col-sm-8 centered">First of all, let me clarify what cryptography really is. Cryptography is a discipline about secure communication techniques used to keep sensitive or secret information undisclosed at all times. An example of that would be a person named Alice writing a letter to Bob that she wants to keep secret. She encrypts a message using a key and the message becomes incomprehensible and thus, secure. </p>
+
+            <p class="col-sm-8 centered">Now, let me define some key concepts in cryptography.</p>
+
+            <ul>
+                <li class="col-sm-8 centered">The <span class="bold">plaintext</span> is the original version of a text that can be read by anybody knowing the language it was written in. Ex: “Hello World!”</li>
+
+                <li class="col-sm-8 centered">The <span class="bold">ciphertext</span> is the encrypted version of a text that cannot be read due to it being incomprehensible. Ex: “Ifmmp Xpsme"</li>
+            
+                <li class="col-sm-8 centered">The <span class="bold">key</span> is the secret part of a cipher. It should be known by both parties to make the secret message exchange possible. The nature of a key depends on the cipher used, for example, the Caesar Cipher’s key is a number between 1-25 while the Vigenère Cipher relies on a keyword.</li>
+            
+                <li class="col-sm-8 centered"><span class="bold">Encryption</span> is a process used to encrypt a message (plaintext), thus turning it into a set of incomprehensible symbols (ciphertext). The key is required during this process, as it defines how the message in question is going to be encrypted.</li>
+
+                <li class="col-sm-8 centered"><span class="bold">Decryption</span> is the inverse process of encryption. Likewise, the key is required to successfully decrypt a message. </li>
+            </ul>
+            <!-- Uncomment when fixed 
+            <img class="col-sm-12 centered" src="basicScheme.png" id="basicScheme">
+            -->
+            <p class="col-sm-8 centered">As you could have guessed already, decryption is very similar to the process shown in the image. The only inverted values are the ciphertext and the plaintext.</p>
+        </div>
+
+        <!-- Separator -->
+        <div class="row">
+            <nav class="separator"></nav>
+        </div>
+
+        <!-- Lower Navbar -->
+        <div class="row">
+            <nav class="lowerNav">
+                <a href="https://github.com/alexkotusenko/alexkotusenko.github.io" class="githubLogoContainer">
+                    <img src="other/githublogo.png" class="githubLogo">
+                </a>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
