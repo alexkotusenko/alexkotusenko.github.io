@@ -1,0 +1,96 @@
+
+.real-time-container {
+    position: relative;
+    width: 400px;
+}
+
+.real-time-container textarea {
+    background-color: white;
+    color: black;
+    outline: none;
+    border: 1px solid white;
+    padding: 10px;
+    display: block;
+    margin: 5px;
+    font-size: 14px;
+    font-family: tahoma;
+    width: 400px;
+    resize: none;
+    border-radius: 2px ;
+}
+
+.real-time-container button {
+    background-color: white;
+    display: inline;
+    font-size: 15px;
+    border: 1px solid rgb(204, 203, 203);
+    border-radius: 4px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px 10px 10px 5px;
+}
+
+.real-time-container input[type="number"] {
+    position: relative;
+    display: inline;
+    float: right;
+    outline: none;
+    font-size: medium;
+    padding: 4px;
+    margin: 10px 5px 10px 10px;
+}
+
+.real-time-container button:active { 
+    background-color: rgb(204, 203, 203);
+}
+
+.real-time-container h3 {
+    color: white;
+    font-family: Verdana;
+}
+
+p {
+    color: white;
+}
+
+
+@media only screen and (max-width: 430px) {
+    .real-time-container {
+        padding: 0;
+        width: 100vw;
+    }
+    .real-time-container textarea {
+        width: 100%;
+        margin: -2px;
+    }
+    .real-time-container p, .real-time-container h3 {
+        margin: 13px;
+    }
+}
+
+pre {
+    font-size: 18px; 
+    background-color: transparent;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    background-color: white;
+    overflow-x: auto;
+}
+
+@media only screen and (max-width: 450px) {
+    pre {
+        font-size: 15px;
+    }
+}
+
+#keyBox {
+    float: right;
+    width: 100px;
+    margin: 10px 5px 10px 10px;
+    outline: none;
+}
+
+.affine-number { 
+    width: 70px;
+}
