@@ -263,3 +263,26 @@ table th, table td {
         transform: translate(-50%);
     }
 }
+
+h5 {
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 550px) {
+    .mainListItem {
+        width: 90%;
+    }
+}
+
+.github-link {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    transition-duration: 1s;
+}
+
+.github-link:hover {
+    text-decoration: underline rgb(209, 69, 93);
+    color: white;
+    cursor: pointer;
+}
